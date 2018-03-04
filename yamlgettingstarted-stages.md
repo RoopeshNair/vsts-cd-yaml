@@ -126,10 +126,10 @@ stages:
     steps:
     - script: echo hello from QA2
 - stage: Production
-  condition: succeeded('dev')
   dependsOn: 
   - QA1
   - QA2
+  condition: succeeded('QA2')
   phases:
     - phase:
       steps:
