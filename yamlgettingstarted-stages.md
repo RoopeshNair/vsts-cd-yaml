@@ -163,7 +163,7 @@ stages:
     steps:
     - script: echo hello from QA2
 - stage: production
-  startType: manual             #startType: manual 
+  startType: manual            
   dependsOn: 
   - QA1
   - QA2
